@@ -1,5 +1,7 @@
 package com.bridgelabz.algorithm;
 
+import java.util.Scanner;
+
 public class Algorithm<K> {
 
     public void insertionSort(String[] array) {
@@ -87,9 +89,26 @@ public class Algorithm<K> {
             arr[j + 1] = value;
         }
     }
+    public void findMyNumber(int num) {
+        searchRecursively(0, num);
+    }
+    private int searchRecursively(int left, int right) {
+        int mid = (left + right) / 2;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("If your number is '" + mid + "' then type 'yes' else\n" + "Type 'low' if number is lesser\n" + "Type 'high' if number is grater");
+        String response = scanner.nextLine();
+        if (response.equals("yes")) {
+            return mid;
+        }
+        if (response.equals("low")) {
+            return searchRecursively(left, mid);
+        } else {
+            return searchRecursively(mid, right);
+        }
+    }
     public void print(K[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i] + " ");
+        for (K k : array) {
+            System.out.println(k + " ");
         }
         System.out.println("\n");
     }
