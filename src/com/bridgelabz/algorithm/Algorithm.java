@@ -2,7 +2,7 @@ package com.bridgelabz.algorithm;
 
 public class Algorithm<K> {
 
-    public void sort(String[] array) {
+    public void insertionSort(String[] array) {
         for (int i = 1; i < array.length; i++) {
             String value = array[i];
             int j = i - 1;
