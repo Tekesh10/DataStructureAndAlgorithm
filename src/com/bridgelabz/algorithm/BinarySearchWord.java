@@ -5,7 +5,7 @@ public class BinarySearchWord {
         Algorithm<String> binarySearch = new Algorithm<>();
 
         String[] fruits = {"Orange","Apple","Mango","Banana","Peach","Guava","Strawberry"};
-        binarySearch.sort(fruits);
+        binarySearch.insertionSort(fruits);
         binarySearch.print(fruits);
         binarySearch.binarySearch(fruits, "Mango");
     }
